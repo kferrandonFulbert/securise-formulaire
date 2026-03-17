@@ -20,8 +20,8 @@ Mettre en place plusieurs mécanismes de protection.
 
 Le TP contient deux dossiers :
 
--   `site_officiel`
--   `site_pirate`
+-   `Le site officiel : Formulaire`
+-   `Le site pirate : HackFormulaire`
 
 ## Lancer le site officiel
 

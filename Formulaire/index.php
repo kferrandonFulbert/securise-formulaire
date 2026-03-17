@@ -31,18 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         try {
             $hash = password_hash($mot_de_passe, PASSWORD_DEFAULT);
-            $stmt = $db->prepare("
-                INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe, date_naissance, telephone)
-                VALUES (:nom, :prenom, :email, :mot_de_passe, :date_naissance, :telephone)
-            ");
-            $stmt->execute([
-                ':nom'            => $nom,
-                ':prenom'         => $prenom,
-                ':email'          => $email,
-                ':mot_de_passe'   => $hash,
-                ':date_naissance' => $date_naissance ?: null,
-                ':telephone'      => $telephone ?: null,
-            ]);
+
+            $db->exec("INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe, date_naissance, telephone)
+                VALUES ('$nom', '$prenom', '$email', '$hash', '$date_naissance', '$telephone')"
+        );
             header('Location: succes.php');
             exit;
         } catch (PDOException $e) {

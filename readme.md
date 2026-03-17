@@ -81,7 +81,9 @@ Questions :
 
 ------------------------------------------------------------------------
 
-# 3 -- Test d'injection de code (XSS)
+# 3 -- Test d'injection SQL et de code (XSS)
+
+Essayer de faire un drop sur la table user, users, utilisateur, ou utilisateurs à l'aide d'une injection SQL.
 
 Essayez d'entrer du **code HTML ou JavaScript** dans les champs du
 formulaire.

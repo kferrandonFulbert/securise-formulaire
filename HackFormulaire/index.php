@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':date_naissance' => $date_naissance ?: null,
                 ':telephone'      => $telephone ?: null,
             ]);
-            $url = 'http://localhost/page2.php';
+            $url = 'http://localhost:83/index.php';
 $data = [
     'nom' => $nom,
     'prenom' => $prenom,
